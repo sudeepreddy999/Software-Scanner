@@ -1,0 +1,1543 @@
+================================================================================
+OPENSSL CIPHER SUITE ANALYSIS - QUANTUM STRENGTH SUMMARY
+================================================================================
+
+Analysis Date: 2025-10-08 02:04:26
+OpenSSL Version: OpenSSL 3.5.2 5 Aug 2025 (Library: OpenSSL 3.5.2 5 Aug 2025)
+Total Cipher Suites Analyzed: 158
+
+================================================================================
+
+SECTION 1: QUANTUM STRENGTH FREQUENCY DISTRIBUTION
+================================================================================
+
+Quantum Strength     Count      Percentage   Status
+--------------------------------------------------------------------------------
+CRITICAL             131          82.9%      🔴 IMMEDIATE ACTION REQUIRED
+LOW                  18           11.4%      🟠 HIGH PRIORITY
+MEDIUM               0             0.0%      🟡 MEDIUM PRIORITY
+HIGH                 9             5.7%      🟢 LOW PRIORITY
+QUANTUM_SAFE         0             0.0%      ✅ SAFE
+
+================================================================================
+
+SECTION 2: CIPHER SUITES BY QUANTUM STRENGTH CATEGORY
+================================================================================
+
+
+================================================================================
+CATEGORY: CRITICAL
+Count: 131
+================================================================================
+
+These cipher suites are CRITICALLY vulnerable to quantum attacks.
+They use RSA, ECDH, or DH key exchange which can be broken by Shor's algorithm.
+ACTION: Disable immediately and migrate to post-quantum alternatives.
+
+--------------------------------------------------------------------------------
+Cipher Suites in this category:
+--------------------------------------------------------------------------------
+
+1. ADH-AES128-GCM-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DH
+   Authentication: None
+   Encryption: AESGCM(128)
+   Key Size: 128 bits
+   Hash: AEAD
+   Quantum Strength Score: 15/100
+
+2. ADH-AES128-SHA
+   Protocol: SSLv3
+   Key Exchange: DH
+   Authentication: None
+   Encryption: AES(128)
+   Key Size: 128 bits
+   Hash: SHA1
+   Quantum Strength Score: 15/100
+
+3. ADH-AES128-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DH
+   Authentication: None
+   Encryption: AES(128)
+   Key Size: 128 bits
+   Hash: SHA256
+   Quantum Strength Score: 15/100
+
+4. ADH-AES256-GCM-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: DH
+   Authentication: None
+   Encryption: AESGCM(256)
+   Key Size: 256 bits
+   Hash: AEAD
+   Quantum Strength Score: 15/100
+
+5. ADH-AES256-SHA
+   Protocol: SSLv3
+   Key Exchange: DH
+   Authentication: None
+   Encryption: AES(256)
+   Key Size: 256 bits
+   Hash: SHA1
+   Quantum Strength Score: 15/100
+
+6. ADH-AES256-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DH
+   Authentication: None
+   Encryption: AES(256)
+   Key Size: 256 bits
+   Hash: SHA256
+   Quantum Strength Score: 15/100
+
+7. ADH-CAMELLIA128-SHA
+   Protocol: SSLv3
+   Key Exchange: DH
+   Authentication: None
+   Encryption: Camellia(128)
+   Key Size: 128 bits
+   Hash: SHA1
+   Quantum Strength Score: 15/100
+
+8. ADH-CAMELLIA128-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DH
+   Authentication: None
+   Encryption: Camellia(128)
+   Key Size: 128 bits
+   Hash: SHA256
+   Quantum Strength Score: 15/100
+
+9. ADH-CAMELLIA256-SHA
+   Protocol: SSLv3
+   Key Exchange: DH
+   Authentication: None
+   Encryption: Camellia(256)
+   Key Size: 256 bits
+   Hash: SHA1
+   Quantum Strength Score: 15/100
+
+10. ADH-CAMELLIA256-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DH
+   Authentication: None
+   Encryption: Camellia(256)
+   Key Size: 256 bits
+   Hash: SHA256
+   Quantum Strength Score: 15/100
+
+11. AECDH-AES128-SHA
+   Protocol: TLSv1
+   Key Exchange: ECDH
+   Authentication: None
+   Encryption: AES(128)
+   Key Size: 128 bits
+   Hash: SHA1
+   Quantum Strength Score: 10/100
+
+12. AECDH-AES256-SHA
+   Protocol: TLSv1
+   Key Exchange: ECDH
+   Authentication: None
+   Encryption: AES(256)
+   Key Size: 256 bits
+   Hash: SHA1
+   Quantum Strength Score: 10/100
+
+13. AECDH-NULL-SHA
+   Protocol: TLSv1
+   Key Exchange: ECDH
+   Authentication: None
+   Encryption: None
+   Hash: SHA1
+   Quantum Strength Score: 10/100
+
+14. AES128-CCM
+   Protocol: TLSv1.2
+   Key Exchange: RSA
+   Authentication: RSA
+   Encryption: AESCCM(128)
+   Key Size: 128 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+15. AES128-CCM8
+   Protocol: TLSv1.2
+   Key Exchange: RSA
+   Authentication: RSA
+   Encryption: AESCCM8(128)
+   Key Size: 128 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+16. AES128-GCM-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: RSA
+   Authentication: RSA
+   Encryption: AESGCM(128)
+   Key Size: 128 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+17. AES128-SHA
+   Protocol: SSLv3
+   Key Exchange: RSA
+   Authentication: RSA
+   Encryption: AES(128)
+   Key Size: 128 bits
+   Hash: SHA1
+   Quantum Strength Score: 10/100
+
+18. AES128-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: RSA
+   Authentication: RSA
+   Encryption: AES(128)
+   Key Size: 128 bits
+   Hash: SHA256
+   Quantum Strength Score: 10/100
+
+19. AES256-CCM
+   Protocol: TLSv1.2
+   Key Exchange: RSA
+   Authentication: RSA
+   Encryption: AESCCM(256)
+   Key Size: 256 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+20. AES256-CCM8
+   Protocol: TLSv1.2
+   Key Exchange: RSA
+   Authentication: RSA
+   Encryption: AESCCM8(256)
+   Key Size: 256 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+21. AES256-GCM-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: RSA
+   Authentication: RSA
+   Encryption: AESGCM(256)
+   Key Size: 256 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+22. AES256-SHA
+   Protocol: SSLv3
+   Key Exchange: RSA
+   Authentication: RSA
+   Encryption: AES(256)
+   Key Size: 256 bits
+   Hash: SHA1
+   Quantum Strength Score: 10/100
+
+23. AES256-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: RSA
+   Authentication: RSA
+   Encryption: AES(256)
+   Key Size: 256 bits
+   Hash: SHA256
+   Quantum Strength Score: 10/100
+
+24. ARIA128-GCM-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: RSA
+   Authentication: RSA
+   Encryption: ARIAGCM(128)
+   Key Size: 128 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+25. ARIA256-GCM-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: RSA
+   Authentication: RSA
+   Encryption: ARIAGCM(256)
+   Key Size: 256 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+26. CAMELLIA128-SHA
+   Protocol: SSLv3
+   Key Exchange: RSA
+   Authentication: RSA
+   Encryption: Camellia(128)
+   Key Size: 128 bits
+   Hash: SHA1
+   Quantum Strength Score: 10/100
+
+27. CAMELLIA128-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: RSA
+   Authentication: RSA
+   Encryption: Camellia(128)
+   Key Size: 128 bits
+   Hash: SHA256
+   Quantum Strength Score: 10/100
+
+28. CAMELLIA256-SHA
+   Protocol: SSLv3
+   Key Exchange: RSA
+   Authentication: RSA
+   Encryption: Camellia(256)
+   Key Size: 256 bits
+   Hash: SHA1
+   Quantum Strength Score: 10/100
+
+29. CAMELLIA256-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: RSA
+   Authentication: RSA
+   Encryption: Camellia(256)
+   Key Size: 256 bits
+   Hash: SHA256
+   Quantum Strength Score: 10/100
+
+30. DHE-DSS-AES128-GCM-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DH
+   Authentication: DSS
+   Encryption: AESGCM(128)
+   Key Size: 128 bits
+   Hash: AEAD
+   Quantum Strength Score: 15/100
+
+31. DHE-DSS-AES128-SHA
+   Protocol: SSLv3
+   Key Exchange: DH
+   Authentication: DSS
+   Encryption: AES(128)
+   Key Size: 128 bits
+   Hash: SHA1
+   Quantum Strength Score: 15/100
+
+32. DHE-DSS-AES128-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DH
+   Authentication: DSS
+   Encryption: AES(128)
+   Key Size: 128 bits
+   Hash: SHA256
+   Quantum Strength Score: 15/100
+
+33. DHE-DSS-AES256-GCM-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: DH
+   Authentication: DSS
+   Encryption: AESGCM(256)
+   Key Size: 256 bits
+   Hash: AEAD
+   Quantum Strength Score: 15/100
+
+34. DHE-DSS-AES256-SHA
+   Protocol: SSLv3
+   Key Exchange: DH
+   Authentication: DSS
+   Encryption: AES(256)
+   Key Size: 256 bits
+   Hash: SHA1
+   Quantum Strength Score: 15/100
+
+35. DHE-DSS-AES256-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DH
+   Authentication: DSS
+   Encryption: AES(256)
+   Key Size: 256 bits
+   Hash: SHA256
+   Quantum Strength Score: 15/100
+
+36. DHE-DSS-ARIA128-GCM-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DH
+   Authentication: DSS
+   Encryption: ARIAGCM(128)
+   Key Size: 128 bits
+   Hash: AEAD
+   Quantum Strength Score: 15/100
+
+37. DHE-DSS-ARIA256-GCM-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: DH
+   Authentication: DSS
+   Encryption: ARIAGCM(256)
+   Key Size: 256 bits
+   Hash: AEAD
+   Quantum Strength Score: 15/100
+
+38. DHE-DSS-CAMELLIA128-SHA
+   Protocol: SSLv3
+   Key Exchange: DH
+   Authentication: DSS
+   Encryption: Camellia(128)
+   Key Size: 128 bits
+   Hash: SHA1
+   Quantum Strength Score: 15/100
+
+39. DHE-DSS-CAMELLIA128-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DH
+   Authentication: DSS
+   Encryption: Camellia(128)
+   Key Size: 128 bits
+   Hash: SHA256
+   Quantum Strength Score: 15/100
+
+40. DHE-DSS-CAMELLIA256-SHA
+   Protocol: SSLv3
+   Key Exchange: DH
+   Authentication: DSS
+   Encryption: Camellia(256)
+   Key Size: 256 bits
+   Hash: SHA1
+   Quantum Strength Score: 15/100
+
+41. DHE-DSS-CAMELLIA256-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DH
+   Authentication: DSS
+   Encryption: Camellia(256)
+   Key Size: 256 bits
+   Hash: SHA256
+   Quantum Strength Score: 15/100
+
+42. DHE-PSK-AES128-CBC-SHA
+   Protocol: SSLv3
+   Key Exchange: DHEPSK
+   Authentication: PSK
+   Encryption: AES(128)
+   Key Size: 128 bits
+   Hash: SHA1
+   Quantum Strength Score: 15/100
+
+43. DHE-PSK-AES128-CBC-SHA256
+   Protocol: TLSv1
+   Key Exchange: DHEPSK
+   Authentication: PSK
+   Encryption: AES(128)
+   Key Size: 128 bits
+   Hash: SHA256
+   Quantum Strength Score: 15/100
+
+44. DHE-PSK-AES128-CCM
+   Protocol: TLSv1.2
+   Key Exchange: DHEPSK
+   Authentication: PSK
+   Encryption: AESCCM(128)
+   Key Size: 128 bits
+   Hash: AEAD
+   Quantum Strength Score: 15/100
+
+45. DHE-PSK-AES128-CCM8
+   Protocol: TLSv1.2
+   Key Exchange: DHEPSK
+   Authentication: PSK
+   Encryption: AESCCM8(128)
+   Key Size: 128 bits
+   Hash: AEAD
+   Quantum Strength Score: 15/100
+
+46. DHE-PSK-AES128-GCM-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DHEPSK
+   Authentication: PSK
+   Encryption: AESGCM(128)
+   Key Size: 128 bits
+   Hash: AEAD
+   Quantum Strength Score: 15/100
+
+47. DHE-PSK-AES256-CBC-SHA
+   Protocol: SSLv3
+   Key Exchange: DHEPSK
+   Authentication: PSK
+   Encryption: AES(256)
+   Key Size: 256 bits
+   Hash: SHA1
+   Quantum Strength Score: 15/100
+
+48. DHE-PSK-AES256-CBC-SHA384
+   Protocol: TLSv1
+   Key Exchange: DHEPSK
+   Authentication: PSK
+   Encryption: AES(256)
+   Key Size: 256 bits
+   Hash: SHA384
+   Quantum Strength Score: 15/100
+
+49. DHE-PSK-AES256-CCM
+   Protocol: TLSv1.2
+   Key Exchange: DHEPSK
+   Authentication: PSK
+   Encryption: AESCCM(256)
+   Key Size: 256 bits
+   Hash: AEAD
+   Quantum Strength Score: 15/100
+
+50. DHE-PSK-AES256-CCM8
+   Protocol: TLSv1.2
+   Key Exchange: DHEPSK
+   Authentication: PSK
+   Encryption: AESCCM8(256)
+   Key Size: 256 bits
+   Hash: AEAD
+   Quantum Strength Score: 15/100
+
+51. DHE-PSK-AES256-GCM-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: DHEPSK
+   Authentication: PSK
+   Encryption: AESGCM(256)
+   Key Size: 256 bits
+   Hash: AEAD
+   Quantum Strength Score: 15/100
+
+52. DHE-PSK-ARIA128-GCM-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DHEPSK
+   Authentication: PSK
+   Encryption: ARIAGCM(128)
+   Key Size: 128 bits
+   Hash: AEAD
+   Quantum Strength Score: 15/100
+
+53. DHE-PSK-ARIA256-GCM-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: DHEPSK
+   Authentication: PSK
+   Encryption: ARIAGCM(256)
+   Key Size: 256 bits
+   Hash: AEAD
+   Quantum Strength Score: 15/100
+
+54. DHE-PSK-CAMELLIA128-SHA256
+   Protocol: TLSv1
+   Key Exchange: DHEPSK
+   Authentication: PSK
+   Encryption: Camellia(128)
+   Key Size: 128 bits
+   Hash: SHA256
+   Quantum Strength Score: 15/100
+
+55. DHE-PSK-CAMELLIA256-SHA384
+   Protocol: TLSv1
+   Key Exchange: DHEPSK
+   Authentication: PSK
+   Encryption: Camellia(256)
+   Key Size: 256 bits
+   Hash: SHA384
+   Quantum Strength Score: 15/100
+
+56. DHE-PSK-CHACHA20-POLY1305
+   Protocol: TLSv1.2
+   Key Exchange: DHEPSK
+   Authentication: PSK
+   Encryption: CHACHA20/POLY1305(256)
+   Key Size: 256 bits
+   Hash: AEAD
+   Quantum Strength Score: 15/100
+
+57. DHE-PSK-NULL-SHA
+   Protocol: SSLv3
+   Key Exchange: DHEPSK
+   Authentication: PSK
+   Encryption: None
+   Hash: SHA1
+   Quantum Strength Score: 15/100
+
+58. DHE-PSK-NULL-SHA256
+   Protocol: TLSv1
+   Key Exchange: DHEPSK
+   Authentication: PSK
+   Encryption: None
+   Hash: SHA256
+   Quantum Strength Score: 15/100
+
+59. DHE-PSK-NULL-SHA384
+   Protocol: TLSv1
+   Key Exchange: DHEPSK
+   Authentication: PSK
+   Encryption: None
+   Hash: SHA384
+   Quantum Strength Score: 15/100
+
+60. DHE-RSA-AES128-CCM
+   Protocol: TLSv1.2
+   Key Exchange: DH
+   Authentication: RSA
+   Encryption: AESCCM(128)
+   Key Size: 128 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+61. DHE-RSA-AES128-CCM8
+   Protocol: TLSv1.2
+   Key Exchange: DH
+   Authentication: RSA
+   Encryption: AESCCM8(128)
+   Key Size: 128 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+62. DHE-RSA-AES128-GCM-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DH
+   Authentication: RSA
+   Encryption: AESGCM(128)
+   Key Size: 128 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+63. DHE-RSA-AES128-SHA
+   Protocol: SSLv3
+   Key Exchange: DH
+   Authentication: RSA
+   Encryption: AES(128)
+   Key Size: 128 bits
+   Hash: SHA1
+   Quantum Strength Score: 10/100
+
+64. DHE-RSA-AES128-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DH
+   Authentication: RSA
+   Encryption: AES(128)
+   Key Size: 128 bits
+   Hash: SHA256
+   Quantum Strength Score: 10/100
+
+65. DHE-RSA-AES256-CCM
+   Protocol: TLSv1.2
+   Key Exchange: DH
+   Authentication: RSA
+   Encryption: AESCCM(256)
+   Key Size: 256 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+66. DHE-RSA-AES256-CCM8
+   Protocol: TLSv1.2
+   Key Exchange: DH
+   Authentication: RSA
+   Encryption: AESCCM8(256)
+   Key Size: 256 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+67. DHE-RSA-AES256-GCM-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: DH
+   Authentication: RSA
+   Encryption: AESGCM(256)
+   Key Size: 256 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+68. DHE-RSA-AES256-SHA
+   Protocol: SSLv3
+   Key Exchange: DH
+   Authentication: RSA
+   Encryption: AES(256)
+   Key Size: 256 bits
+   Hash: SHA1
+   Quantum Strength Score: 10/100
+
+69. DHE-RSA-AES256-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DH
+   Authentication: RSA
+   Encryption: AES(256)
+   Key Size: 256 bits
+   Hash: SHA256
+   Quantum Strength Score: 10/100
+
+70. DHE-RSA-ARIA128-GCM-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DH
+   Authentication: RSA
+   Encryption: ARIAGCM(128)
+   Key Size: 128 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+71. DHE-RSA-ARIA256-GCM-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: DH
+   Authentication: RSA
+   Encryption: ARIAGCM(256)
+   Key Size: 256 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+72. DHE-RSA-CAMELLIA128-SHA
+   Protocol: SSLv3
+   Key Exchange: DH
+   Authentication: RSA
+   Encryption: Camellia(128)
+   Key Size: 128 bits
+   Hash: SHA1
+   Quantum Strength Score: 10/100
+
+73. DHE-RSA-CAMELLIA128-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DH
+   Authentication: RSA
+   Encryption: Camellia(128)
+   Key Size: 128 bits
+   Hash: SHA256
+   Quantum Strength Score: 10/100
+
+74. DHE-RSA-CAMELLIA256-SHA
+   Protocol: SSLv3
+   Key Exchange: DH
+   Authentication: RSA
+   Encryption: Camellia(256)
+   Key Size: 256 bits
+   Hash: SHA1
+   Quantum Strength Score: 10/100
+
+75. DHE-RSA-CAMELLIA256-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DH
+   Authentication: RSA
+   Encryption: Camellia(256)
+   Key Size: 256 bits
+   Hash: SHA256
+   Quantum Strength Score: 10/100
+
+76. DHE-RSA-CHACHA20-POLY1305
+   Protocol: TLSv1.2
+   Key Exchange: DH
+   Authentication: RSA
+   Encryption: CHACHA20/POLY1305(256)
+   Key Size: 256 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+77. ECDHE-ARIA128-GCM-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: ECDH
+   Authentication: RSA
+   Encryption: ARIAGCM(128)
+   Key Size: 128 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+78. ECDHE-ARIA256-GCM-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: ECDH
+   Authentication: RSA
+   Encryption: ARIAGCM(256)
+   Key Size: 256 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+79. ECDHE-ECDSA-AES128-CCM
+   Protocol: TLSv1.2
+   Key Exchange: ECDH
+   Authentication: ECDSA
+   Encryption: AESCCM(128)
+   Key Size: 128 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+80. ECDHE-ECDSA-AES128-CCM8
+   Protocol: TLSv1.2
+   Key Exchange: ECDH
+   Authentication: ECDSA
+   Encryption: AESCCM8(128)
+   Key Size: 128 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+81. ECDHE-ECDSA-AES128-GCM-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: ECDH
+   Authentication: ECDSA
+   Encryption: AESGCM(128)
+   Key Size: 128 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+82. ECDHE-ECDSA-AES128-SHA
+   Protocol: TLSv1
+   Key Exchange: ECDH
+   Authentication: ECDSA
+   Encryption: AES(128)
+   Key Size: 128 bits
+   Hash: SHA1
+   Quantum Strength Score: 10/100
+
+83. ECDHE-ECDSA-AES128-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: ECDH
+   Authentication: ECDSA
+   Encryption: AES(128)
+   Key Size: 128 bits
+   Hash: SHA256
+   Quantum Strength Score: 10/100
+
+84. ECDHE-ECDSA-AES256-CCM
+   Protocol: TLSv1.2
+   Key Exchange: ECDH
+   Authentication: ECDSA
+   Encryption: AESCCM(256)
+   Key Size: 256 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+85. ECDHE-ECDSA-AES256-CCM8
+   Protocol: TLSv1.2
+   Key Exchange: ECDH
+   Authentication: ECDSA
+   Encryption: AESCCM8(256)
+   Key Size: 256 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+86. ECDHE-ECDSA-AES256-GCM-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: ECDH
+   Authentication: ECDSA
+   Encryption: AESGCM(256)
+   Key Size: 256 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+87. ECDHE-ECDSA-AES256-SHA
+   Protocol: TLSv1
+   Key Exchange: ECDH
+   Authentication: ECDSA
+   Encryption: AES(256)
+   Key Size: 256 bits
+   Hash: SHA1
+   Quantum Strength Score: 10/100
+
+88. ECDHE-ECDSA-AES256-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: ECDH
+   Authentication: ECDSA
+   Encryption: AES(256)
+   Key Size: 256 bits
+   Hash: SHA384
+   Quantum Strength Score: 10/100
+
+89. ECDHE-ECDSA-ARIA128-GCM-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: ECDH
+   Authentication: ECDSA
+   Encryption: ARIAGCM(128)
+   Key Size: 128 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+90. ECDHE-ECDSA-ARIA256-GCM-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: ECDH
+   Authentication: ECDSA
+   Encryption: ARIAGCM(256)
+   Key Size: 256 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+91. ECDHE-ECDSA-CAMELLIA128-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: ECDH
+   Authentication: ECDSA
+   Encryption: Camellia(128)
+   Key Size: 128 bits
+   Hash: SHA256
+   Quantum Strength Score: 10/100
+
+92. ECDHE-ECDSA-CAMELLIA256-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: ECDH
+   Authentication: ECDSA
+   Encryption: Camellia(256)
+   Key Size: 256 bits
+   Hash: SHA384
+   Quantum Strength Score: 10/100
+
+93. ECDHE-ECDSA-CHACHA20-POLY1305
+   Protocol: TLSv1.2
+   Key Exchange: ECDH
+   Authentication: ECDSA
+   Encryption: CHACHA20/POLY1305(256)
+   Key Size: 256 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+94. ECDHE-ECDSA-NULL-SHA
+   Protocol: TLSv1
+   Key Exchange: ECDH
+   Authentication: ECDSA
+   Encryption: None
+   Hash: SHA1
+   Quantum Strength Score: 10/100
+
+95. ECDHE-PSK-AES128-CBC-SHA
+   Protocol: TLSv1
+   Key Exchange: ECDHEPSK
+   Authentication: PSK
+   Encryption: AES(128)
+   Key Size: 128 bits
+   Hash: SHA1
+   Quantum Strength Score: 10/100
+
+96. ECDHE-PSK-AES128-CBC-SHA256
+   Protocol: TLSv1
+   Key Exchange: ECDHEPSK
+   Authentication: PSK
+   Encryption: AES(128)
+   Key Size: 128 bits
+   Hash: SHA256
+   Quantum Strength Score: 10/100
+
+97. ECDHE-PSK-AES256-CBC-SHA
+   Protocol: TLSv1
+   Key Exchange: ECDHEPSK
+   Authentication: PSK
+   Encryption: AES(256)
+   Key Size: 256 bits
+   Hash: SHA1
+   Quantum Strength Score: 10/100
+
+98. ECDHE-PSK-AES256-CBC-SHA384
+   Protocol: TLSv1
+   Key Exchange: ECDHEPSK
+   Authentication: PSK
+   Encryption: AES(256)
+   Key Size: 256 bits
+   Hash: SHA384
+   Quantum Strength Score: 10/100
+
+99. ECDHE-PSK-CAMELLIA128-SHA256
+   Protocol: TLSv1
+   Key Exchange: ECDHEPSK
+   Authentication: PSK
+   Encryption: Camellia(128)
+   Key Size: 128 bits
+   Hash: SHA256
+   Quantum Strength Score: 10/100
+
+100. ECDHE-PSK-CAMELLIA256-SHA384
+   Protocol: TLSv1
+   Key Exchange: ECDHEPSK
+   Authentication: PSK
+   Encryption: Camellia(256)
+   Key Size: 256 bits
+   Hash: SHA384
+   Quantum Strength Score: 10/100
+
+101. ECDHE-PSK-CHACHA20-POLY1305
+   Protocol: TLSv1.2
+   Key Exchange: ECDHEPSK
+   Authentication: PSK
+   Encryption: CHACHA20/POLY1305(256)
+   Key Size: 256 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+102. ECDHE-PSK-NULL-SHA
+   Protocol: TLSv1
+   Key Exchange: ECDHEPSK
+   Authentication: PSK
+   Encryption: None
+   Hash: SHA1
+   Quantum Strength Score: 10/100
+
+103. ECDHE-PSK-NULL-SHA256
+   Protocol: TLSv1
+   Key Exchange: ECDHEPSK
+   Authentication: PSK
+   Encryption: None
+   Hash: SHA256
+   Quantum Strength Score: 10/100
+
+104. ECDHE-PSK-NULL-SHA384
+   Protocol: TLSv1
+   Key Exchange: ECDHEPSK
+   Authentication: PSK
+   Encryption: None
+   Hash: SHA384
+   Quantum Strength Score: 10/100
+
+105. ECDHE-RSA-AES128-GCM-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: ECDH
+   Authentication: RSA
+   Encryption: AESGCM(128)
+   Key Size: 128 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+106. ECDHE-RSA-AES128-SHA
+   Protocol: TLSv1
+   Key Exchange: ECDH
+   Authentication: RSA
+   Encryption: AES(128)
+   Key Size: 128 bits
+   Hash: SHA1
+   Quantum Strength Score: 10/100
+
+107. ECDHE-RSA-AES128-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: ECDH
+   Authentication: RSA
+   Encryption: AES(128)
+   Key Size: 128 bits
+   Hash: SHA256
+   Quantum Strength Score: 10/100
+
+108. ECDHE-RSA-AES256-GCM-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: ECDH
+   Authentication: RSA
+   Encryption: AESGCM(256)
+   Key Size: 256 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+109. ECDHE-RSA-AES256-SHA
+   Protocol: TLSv1
+   Key Exchange: ECDH
+   Authentication: RSA
+   Encryption: AES(256)
+   Key Size: 256 bits
+   Hash: SHA1
+   Quantum Strength Score: 10/100
+
+110. ECDHE-RSA-AES256-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: ECDH
+   Authentication: RSA
+   Encryption: AES(256)
+   Key Size: 256 bits
+   Hash: SHA384
+   Quantum Strength Score: 10/100
+
+111. ECDHE-RSA-CAMELLIA128-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: ECDH
+   Authentication: RSA
+   Encryption: Camellia(128)
+   Key Size: 128 bits
+   Hash: SHA256
+   Quantum Strength Score: 10/100
+
+112. ECDHE-RSA-CAMELLIA256-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: ECDH
+   Authentication: RSA
+   Encryption: Camellia(256)
+   Key Size: 256 bits
+   Hash: SHA384
+   Quantum Strength Score: 10/100
+
+113. ECDHE-RSA-CHACHA20-POLY1305
+   Protocol: TLSv1.2
+   Key Exchange: ECDH
+   Authentication: RSA
+   Encryption: CHACHA20/POLY1305(256)
+   Key Size: 256 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+114. ECDHE-RSA-NULL-SHA
+   Protocol: TLSv1
+   Key Exchange: ECDH
+   Authentication: RSA
+   Encryption: None
+   Hash: SHA1
+   Quantum Strength Score: 10/100
+
+115. NULL-MD5
+   Protocol: SSLv3
+   Key Exchange: RSA
+   Authentication: RSA
+   Encryption: None
+   Hash: MD5
+   Quantum Strength Score: 10/100
+
+116. NULL-SHA
+   Protocol: SSLv3
+   Key Exchange: RSA
+   Authentication: RSA
+   Encryption: None
+   Hash: SHA1
+   Quantum Strength Score: 10/100
+
+117. NULL-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: RSA
+   Authentication: RSA
+   Encryption: None
+   Hash: SHA256
+   Quantum Strength Score: 10/100
+
+118. RSA-PSK-AES128-CBC-SHA
+   Protocol: SSLv3
+   Key Exchange: RSAPSK
+   Authentication: RSA
+   Encryption: AES(128)
+   Key Size: 128 bits
+   Hash: SHA1
+   Quantum Strength Score: 10/100
+
+119. RSA-PSK-AES128-CBC-SHA256
+   Protocol: TLSv1
+   Key Exchange: RSAPSK
+   Authentication: RSA
+   Encryption: AES(128)
+   Key Size: 128 bits
+   Hash: SHA256
+   Quantum Strength Score: 10/100
+
+120. RSA-PSK-AES128-GCM-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: RSAPSK
+   Authentication: RSA
+   Encryption: AESGCM(128)
+   Key Size: 128 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+121. RSA-PSK-AES256-CBC-SHA
+   Protocol: SSLv3
+   Key Exchange: RSAPSK
+   Authentication: RSA
+   Encryption: AES(256)
+   Key Size: 256 bits
+   Hash: SHA1
+   Quantum Strength Score: 10/100
+
+122. RSA-PSK-AES256-CBC-SHA384
+   Protocol: TLSv1
+   Key Exchange: RSAPSK
+   Authentication: RSA
+   Encryption: AES(256)
+   Key Size: 256 bits
+   Hash: SHA384
+   Quantum Strength Score: 10/100
+
+123. RSA-PSK-AES256-GCM-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: RSAPSK
+   Authentication: RSA
+   Encryption: AESGCM(256)
+   Key Size: 256 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+124. RSA-PSK-ARIA128-GCM-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: RSAPSK
+   Authentication: RSA
+   Encryption: ARIAGCM(128)
+   Key Size: 128 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+125. RSA-PSK-ARIA256-GCM-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: RSAPSK
+   Authentication: RSA
+   Encryption: ARIAGCM(256)
+   Key Size: 256 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+126. RSA-PSK-CAMELLIA128-SHA256
+   Protocol: TLSv1
+   Key Exchange: RSAPSK
+   Authentication: RSA
+   Encryption: Camellia(128)
+   Key Size: 128 bits
+   Hash: SHA256
+   Quantum Strength Score: 10/100
+
+127. RSA-PSK-CAMELLIA256-SHA384
+   Protocol: TLSv1
+   Key Exchange: RSAPSK
+   Authentication: RSA
+   Encryption: Camellia(256)
+   Key Size: 256 bits
+   Hash: SHA384
+   Quantum Strength Score: 10/100
+
+128. RSA-PSK-CHACHA20-POLY1305
+   Protocol: TLSv1.2
+   Key Exchange: RSAPSK
+   Authentication: RSA
+   Encryption: CHACHA20/POLY1305(256)
+   Key Size: 256 bits
+   Hash: AEAD
+   Quantum Strength Score: 10/100
+
+129. RSA-PSK-NULL-SHA
+   Protocol: SSLv3
+   Key Exchange: RSAPSK
+   Authentication: RSA
+   Encryption: None
+   Hash: SHA1
+   Quantum Strength Score: 10/100
+
+130. RSA-PSK-NULL-SHA256
+   Protocol: TLSv1
+   Key Exchange: RSAPSK
+   Authentication: RSA
+   Encryption: None
+   Hash: SHA256
+   Quantum Strength Score: 10/100
+
+131. RSA-PSK-NULL-SHA384
+   Protocol: TLSv1
+   Key Exchange: RSAPSK
+   Authentication: RSA
+   Encryption: None
+   Hash: SHA384
+   Quantum Strength Score: 10/100
+
+
+================================================================================
+CATEGORY: LOW
+Count: 18
+================================================================================
+
+These cipher suites have LIMITED quantum resistance.
+Typically AES-128 based (reduced to 64-bit security with Grover's algorithm).
+ACTION: Plan migration within 1-2 years.
+
+--------------------------------------------------------------------------------
+Cipher Suites in this category:
+--------------------------------------------------------------------------------
+
+1. PSK-AES128-CBC-SHA
+   Protocol: SSLv3
+   Key Exchange: PSK
+   Authentication: PSK
+   Encryption: AES(128)
+   Key Size: 128 bits
+   Hash: SHA1
+   Quantum Strength Score: 40/100
+
+2. PSK-AES128-CBC-SHA256
+   Protocol: TLSv1
+   Key Exchange: PSK
+   Authentication: PSK
+   Encryption: AES(128)
+   Key Size: 128 bits
+   Hash: SHA256
+   Quantum Strength Score: 40/100
+
+3. PSK-AES128-CCM
+   Protocol: TLSv1.2
+   Key Exchange: PSK
+   Authentication: PSK
+   Encryption: AESCCM(128)
+   Key Size: 128 bits
+   Hash: AEAD
+   Quantum Strength Score: 40/100
+
+4. PSK-AES128-CCM8
+   Protocol: TLSv1.2
+   Key Exchange: PSK
+   Authentication: PSK
+   Encryption: AESCCM8(128)
+   Key Size: 128 bits
+   Hash: AEAD
+   Quantum Strength Score: 40/100
+
+5. PSK-AES128-GCM-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: PSK
+   Authentication: PSK
+   Encryption: AESGCM(128)
+   Key Size: 128 bits
+   Hash: AEAD
+   Quantum Strength Score: 40/100
+
+6. PSK-ARIA128-GCM-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: PSK
+   Authentication: PSK
+   Encryption: ARIAGCM(128)
+   Key Size: 128 bits
+   Hash: AEAD
+   Quantum Strength Score: 25/100
+
+7. PSK-ARIA256-GCM-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: PSK
+   Authentication: PSK
+   Encryption: ARIAGCM(256)
+   Key Size: 256 bits
+   Hash: AEAD
+   Quantum Strength Score: 25/100
+
+8. PSK-CAMELLIA128-SHA256
+   Protocol: TLSv1
+   Key Exchange: PSK
+   Authentication: PSK
+   Encryption: Camellia(128)
+   Key Size: 128 bits
+   Hash: SHA256
+   Quantum Strength Score: 25/100
+
+9. PSK-CAMELLIA256-SHA384
+   Protocol: TLSv1
+   Key Exchange: PSK
+   Authentication: PSK
+   Encryption: Camellia(256)
+   Key Size: 256 bits
+   Hash: SHA384
+   Quantum Strength Score: 25/100
+
+10. PSK-CHACHA20-POLY1305
+   Protocol: TLSv1.2
+   Key Exchange: PSK
+   Authentication: PSK
+   Encryption: CHACHA20/POLY1305(256)
+   Key Size: 256 bits
+   Hash: AEAD
+   Quantum Strength Score: 25/100
+
+11. PSK-NULL-SHA
+   Protocol: SSLv3
+   Key Exchange: PSK
+   Authentication: PSK
+   Encryption: None
+   Hash: SHA1
+   Quantum Strength Score: 25/100
+
+12. PSK-NULL-SHA256
+   Protocol: TLSv1
+   Key Exchange: PSK
+   Authentication: PSK
+   Encryption: None
+   Hash: SHA256
+   Quantum Strength Score: 25/100
+
+13. PSK-NULL-SHA384
+   Protocol: TLSv1
+   Key Exchange: PSK
+   Authentication: PSK
+   Encryption: None
+   Hash: SHA384
+   Quantum Strength Score: 25/100
+
+14. SRP-AES-128-CBC-SHA
+   Protocol: SSLv3
+   Key Exchange: SRP
+   Authentication: SRP
+   Encryption: AES(128)
+   Key Size: 128 bits
+   Hash: SHA1
+   Quantum Strength Score: 40/100
+
+15. SRP-DSS-AES-128-CBC-SHA
+   Protocol: SSLv3
+   Key Exchange: SRP
+   Authentication: DSS
+   Encryption: AES(128)
+   Key Size: 128 bits
+   Hash: SHA1
+   Quantum Strength Score: 40/100
+
+16. SRP-RSA-AES-128-CBC-SHA
+   Protocol: SSLv3
+   Key Exchange: SRP
+   Authentication: RSA
+   Encryption: AES(128)
+   Key Size: 128 bits
+   Hash: SHA1
+   Quantum Strength Score: 40/100
+
+17. TLS_AES_128_GCM_SHA256
+   Protocol: TLSv1.3
+   Key Exchange: any
+   Authentication: any
+   Encryption: AESGCM(128)
+   Key Size: 128 bits
+   Hash: AEAD
+   Quantum Strength Score: 40/100
+
+18. TLS_CHACHA20_POLY1305_SHA256
+   Protocol: TLSv1.3
+   Key Exchange: any
+   Authentication: any
+   Encryption: CHACHA20/POLY1305(256)
+   Key Size: 256 bits
+   Hash: AEAD
+   Quantum Strength Score: 25/100
+
+
+================================================================================
+CATEGORY: HIGH
+Count: 9
+================================================================================
+
+These cipher suites have GOOD quantum resistance.
+Typically AES-256 based (provides 128-bit quantum security).
+ACTION: Acceptable for current use, monitor developments.
+
+--------------------------------------------------------------------------------
+Cipher Suites in this category:
+--------------------------------------------------------------------------------
+
+1. PSK-AES256-CBC-SHA
+   Protocol: SSLv3
+   Key Exchange: PSK
+   Authentication: PSK
+   Encryption: AES(256)
+   Key Size: 256 bits
+   Hash: SHA1
+   Quantum Strength Score: 80/100
+
+2. PSK-AES256-CBC-SHA384
+   Protocol: TLSv1
+   Key Exchange: PSK
+   Authentication: PSK
+   Encryption: AES(256)
+   Key Size: 256 bits
+   Hash: SHA384
+   Quantum Strength Score: 80/100
+
+3. PSK-AES256-CCM
+   Protocol: TLSv1.2
+   Key Exchange: PSK
+   Authentication: PSK
+   Encryption: AESCCM(256)
+   Key Size: 256 bits
+   Hash: AEAD
+   Quantum Strength Score: 80/100
+
+4. PSK-AES256-CCM8
+   Protocol: TLSv1.2
+   Key Exchange: PSK
+   Authentication: PSK
+   Encryption: AESCCM8(256)
+   Key Size: 256 bits
+   Hash: AEAD
+   Quantum Strength Score: 80/100
+
+5. PSK-AES256-GCM-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: PSK
+   Authentication: PSK
+   Encryption: AESGCM(256)
+   Key Size: 256 bits
+   Hash: AEAD
+   Quantum Strength Score: 80/100
+
+6. SRP-AES-256-CBC-SHA
+   Protocol: SSLv3
+   Key Exchange: SRP
+   Authentication: SRP
+   Encryption: AES(256)
+   Key Size: 256 bits
+   Hash: SHA1
+   Quantum Strength Score: 80/100
+
+7. SRP-DSS-AES-256-CBC-SHA
+   Protocol: SSLv3
+   Key Exchange: SRP
+   Authentication: DSS
+   Encryption: AES(256)
+   Key Size: 256 bits
+   Hash: SHA1
+   Quantum Strength Score: 80/100
+
+8. SRP-RSA-AES-256-CBC-SHA
+   Protocol: SSLv3
+   Key Exchange: SRP
+   Authentication: RSA
+   Encryption: AES(256)
+   Key Size: 256 bits
+   Hash: SHA1
+   Quantum Strength Score: 80/100
+
+9. TLS_AES_256_GCM_SHA384
+   Protocol: TLSv1.3
+   Key Exchange: any
+   Authentication: any
+   Encryption: AESGCM(256)
+   Key Size: 256 bits
+   Hash: AEAD
+   Quantum Strength Score: 80/100
+
+
+================================================================================
+SECTION 3: ADDITIONAL STATISTICS
+================================================================================
+
+Distribution by Protocol Version:
+--------------------------------------------------------------------------------
+  SSLv3             33 cipher suites ( 20.9%)
+  TLSv1             36 cipher suites ( 22.8%)
+  TLSv1.2           86 cipher suites ( 54.4%)
+  TLSv1.3            3 cipher suites (  1.9%)
+
+Distribution by Key Exchange Algorithm:
+--------------------------------------------------------------------------------
+  DH                39 cipher suites ( 24.7%)
+  ECDH              31 cipher suites ( 19.6%)
+  RSA               19 cipher suites ( 12.0%)
+  DHEPSK            18 cipher suites ( 11.4%)
+  PSK               18 cipher suites ( 11.4%)
+  RSAPSK            14 cipher suites (  8.9%)
+  ECDHEPSK          10 cipher suites (  6.3%)
+  SRP                6 cipher suites (  3.8%)
+  any                3 cipher suites (  1.9%)
+
+Distribution by Encryption Algorithm:
+--------------------------------------------------------------------------------
+  AES(256)               24 cipher suites ( 15.2%)
+  AES(128)               24 cipher suites ( 15.2%)
+  None                   18 cipher suites ( 11.4%)
+  Camellia(256)          14 cipher suites (  8.9%)
+  Camellia(128)          14 cipher suites (  8.9%)
+  AESGCM(256)            10 cipher suites (  6.3%)
+  AESGCM(128)            10 cipher suites (  6.3%)
+  CHACHA20/POLY1305(256)    8 cipher suites (  5.1%)
+  ARIAGCM(256)            8 cipher suites (  5.1%)
+  ARIAGCM(128)            8 cipher suites (  5.1%)
+  AESCCM(256)             5 cipher suites (  3.2%)
+  AESCCM(128)             5 cipher suites (  3.2%)
+  AESCCM8(256)            5 cipher suites (  3.2%)
+  AESCCM8(128)            5 cipher suites (  3.2%)
+
+
+================================================================================
+SECTION 4: RECOMMENDATIONS
+================================================================================
+
+⚠️  URGENT: 131 CRITICAL cipher suites detected!
+
+IMMEDIATE ACTIONS REQUIRED:
+  1. Disable all cipher suites marked as CRITICAL
+  2. Configure TLS to prefer HIGH or QUANTUM_SAFE cipher suites
+  3. Plan migration to post-quantum cryptography
+
+POST-QUANTUM MIGRATION TIMELINE:
+  • Immediate (0-6 months): Audit and disable weak ciphers
+  • Short-term (6-12 months): Implement hybrid classical+PQC
+  • Medium-term (1-2 years): Migrate critical systems to PQC
+  • Long-term (2-5 years): Complete organizational PQC deployment
+
+RECOMMENDED POST-QUANTUM ALGORITHMS:
+  • CRYSTALS-Kyber: Key encapsulation mechanism
+  • CRYSTALS-Dilithium: Digital signatures
+  • FALCON: Compact signatures
+  • SPHINCS+: Hash-based signatures
+
+================================================================================
+END OF REPORT
+================================================================================
+
+Report generated by Quantum Vulnerability Scanner v1.0.0
+For detailed analysis, refer to the Excel report.

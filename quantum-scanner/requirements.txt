@@ -1,0 +1,20 @@
+# Core dependencies
+pyyaml>=6.0
+colorama>=0.4.6
+click>=8.1.0
+
+# For parsing certificates/keys in Windows system scan
+cryptography>=41.0.0
+
+# For HTML report generation
+jinja2>=3.1.0
+
+# For better CLI output
+rich>=13.0.0
+tabulate>=0.9.0
+
+# Development dependencies
+pytest>=7.4.0
+pytest-cov>=4.1.0
+black>=23.0.0
+flake8>=6.0.0

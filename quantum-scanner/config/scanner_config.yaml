@@ -1,0 +1,57 @@
+# Scanner Configuration
+
+# File patterns to exclude from scanning
+exclude_patterns:
+  - "*/node_modules/*"
+  - "*/venv/*"
+  - "*/env/*"
+  - "*/.venv/*"
+  - "*/site-packages/*"
+  - "*/__pycache__/*"
+  - "*/.git/*"
+  - "*/build/*"
+  - "*/dist/*"
+  - "*/target/*"
+  - "*/vendor/*"
+
+# File extensions to scan by language
+file_extensions:
+  python:
+    - ".py"
+  java:
+    - ".java"
+  javascript:
+    - ".js"
+    - ".jsx"
+    - ".ts"
+    - ".tsx"
+  c_cpp:
+    - ".c"
+    - ".cpp"
+    - ".cc"
+    - ".cxx"
+    - ".h"
+    - ".hpp"
+  go:
+    - ".go"
+  rust:
+    - ".rs"
+  csharp:
+    - ".cs"
+
+# Severity level defaults
+severity_levels:
+  RSA: "CRITICAL"
+  ECDSA: "CRITICAL"
+  ECDH: "CRITICAL"
+  DSA: "CRITICAL"
+  DH: "HIGH"
+  ElGamal: "HIGH"
+  ECC: "CRITICAL"
+
+# Maximum file size to scan (in MB)
+max_file_size_mb: 10
+
+# Enable parallel scanning
+parallel_scanning: true
+max_workers: 4

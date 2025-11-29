@@ -1,0 +1,1349 @@
+================================================================================
+OPENSSL CIPHER SUITE ANALYSIS - QUANTUM STRENGTH SUMMARY
+================================================================================
+
+Analysis Date: 2025-11-27 01:42:06
+OpenSSL Version: OpenSSL 3.5.2 5 Aug 2025 (Library: OpenSSL 3.5.2 5 Aug 2025)
+Total Cipher Suites Analyzed: 158
+
+================================================================================
+
+CIPHER SUITES BY QUANTUM STRENGTH CATEGORY
+================================================================================
+
+
+================================================================================
+CATEGORY: CRITICAL
+Count: 131
+================================================================================
+
+These cipher suites are CRITICALLY vulnerable to quantum attacks.
+They use RSA, ECDH, or DH key exchange which can be broken by Shor's algorithm.
+ACTION: Disable immediately and migrate to post-quantum alternatives.
+
+--------------------------------------------------------------------------------
+Cipher Suites in this category:
+--------------------------------------------------------------------------------
+
+1. ADH-AES128-GCM-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: None [Quantum-Vulnerable]
+   Encryption: AESGCM(128) (128-bit) [Quantum-Vulnerable]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 15/100
+
+2. ADH-AES128-SHA
+   Protocol: SSLv3
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: None [Quantum-Vulnerable]
+   Encryption: AES(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 15/100
+
+3. ADH-AES128-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: None [Quantum-Vulnerable]
+   Encryption: AES(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA256 (256-bit) [Quantum-Safe]
+   Quantum Strength Score: 15/100
+
+4. ADH-AES256-GCM-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: None [Quantum-Vulnerable]
+   Encryption: AESGCM(256) (256-bit) [Quantum-Safe]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 15/100
+
+5. ADH-AES256-SHA
+   Protocol: SSLv3
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: None [Quantum-Vulnerable]
+   Encryption: AES(256) (256-bit) [Quantum-Safe]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 15/100
+
+6. ADH-AES256-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: None [Quantum-Vulnerable]
+   Encryption: AES(256) (256-bit) [Quantum-Safe]
+   Hash: SHA256 (256-bit) [Quantum-Safe]
+   Quantum Strength Score: 15/100
+
+7. ADH-CAMELLIA128-SHA
+   Protocol: SSLv3
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: None [Quantum-Vulnerable]
+   Encryption: Camellia(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 15/100
+
+8. ADH-CAMELLIA128-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: None [Quantum-Vulnerable]
+   Encryption: Camellia(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA256 (256-bit) [Quantum-Safe]
+   Quantum Strength Score: 15/100
+
+9. ADH-CAMELLIA256-SHA
+   Protocol: SSLv3
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: None [Quantum-Vulnerable]
+   Encryption: Camellia(256) (256-bit) [Quantum-Safe]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 15/100
+
+10. ADH-CAMELLIA256-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: None [Quantum-Vulnerable]
+   Encryption: Camellia(256) (256-bit) [Quantum-Safe]
+   Hash: SHA256 (256-bit) [Quantum-Safe]
+   Quantum Strength Score: 15/100
+
+11. AECDH-AES128-SHA
+   Protocol: TLSv1
+   Key Exchange: ECDH [Quantum-Vulnerable]
+   Authentication: None [Quantum-Vulnerable]
+   Encryption: AES(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+12. AECDH-AES256-SHA
+   Protocol: TLSv1
+   Key Exchange: ECDH [Quantum-Vulnerable]
+   Authentication: None [Quantum-Vulnerable]
+   Encryption: AES(256) (256-bit) [Quantum-Safe]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+13. AECDH-NULL-SHA
+   Protocol: TLSv1
+   Key Exchange: ECDH [Quantum-Vulnerable]
+   Authentication: None [Quantum-Vulnerable]
+   Encryption: None [Quantum-Vulnerable]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+14. AES128-CCM
+   Protocol: TLSv1.2
+   Key Exchange: RSA [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: AESCCM(128) (128-bit) [Quantum-Vulnerable]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+15. AES128-CCM8
+   Protocol: TLSv1.2
+   Key Exchange: RSA [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: AESCCM8(128) (128-bit) [Quantum-Vulnerable]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+16. AES128-GCM-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: RSA [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: AESGCM(128) (128-bit) [Quantum-Vulnerable]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+17. AES128-SHA
+   Protocol: SSLv3
+   Key Exchange: RSA [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: AES(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+18. AES128-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: RSA [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: AES(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA256 (256-bit) [Quantum-Safe]
+   Quantum Strength Score: 10/100
+
+19. AES256-CCM
+   Protocol: TLSv1.2
+   Key Exchange: RSA [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: AESCCM(256) (256-bit) [Quantum-Safe]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+20. AES256-CCM8
+   Protocol: TLSv1.2
+   Key Exchange: RSA [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: AESCCM8(256) (256-bit) [Quantum-Safe]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+21. AES256-GCM-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: RSA [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: AESGCM(256) (256-bit) [Quantum-Safe]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+22. AES256-SHA
+   Protocol: SSLv3
+   Key Exchange: RSA [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: AES(256) (256-bit) [Quantum-Safe]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+23. AES256-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: RSA [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: AES(256) (256-bit) [Quantum-Safe]
+   Hash: SHA256 (256-bit) [Quantum-Safe]
+   Quantum Strength Score: 10/100
+
+24. ARIA128-GCM-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: RSA [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: ARIAGCM(128) (128-bit) [Quantum-Vulnerable]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+25. ARIA256-GCM-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: RSA [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: ARIAGCM(256) (256-bit) [Quantum-Safe]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+26. CAMELLIA128-SHA
+   Protocol: SSLv3
+   Key Exchange: RSA [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: Camellia(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+27. CAMELLIA128-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: RSA [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: Camellia(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA256 (256-bit) [Quantum-Safe]
+   Quantum Strength Score: 10/100
+
+28. CAMELLIA256-SHA
+   Protocol: SSLv3
+   Key Exchange: RSA [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: Camellia(256) (256-bit) [Quantum-Safe]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+29. CAMELLIA256-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: RSA [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: Camellia(256) (256-bit) [Quantum-Safe]
+   Hash: SHA256 (256-bit) [Quantum-Safe]
+   Quantum Strength Score: 10/100
+
+30. DHE-DSS-AES128-GCM-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: DSS [Quantum-Vulnerable]
+   Encryption: AESGCM(128) (128-bit) [Quantum-Vulnerable]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 15/100
+
+31. DHE-DSS-AES128-SHA
+   Protocol: SSLv3
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: DSS [Quantum-Vulnerable]
+   Encryption: AES(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 15/100
+
+32. DHE-DSS-AES128-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: DSS [Quantum-Vulnerable]
+   Encryption: AES(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA256 (256-bit) [Quantum-Safe]
+   Quantum Strength Score: 15/100
+
+33. DHE-DSS-AES256-GCM-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: DSS [Quantum-Vulnerable]
+   Encryption: AESGCM(256) (256-bit) [Quantum-Safe]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 15/100
+
+34. DHE-DSS-AES256-SHA
+   Protocol: SSLv3
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: DSS [Quantum-Vulnerable]
+   Encryption: AES(256) (256-bit) [Quantum-Safe]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 15/100
+
+35. DHE-DSS-AES256-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: DSS [Quantum-Vulnerable]
+   Encryption: AES(256) (256-bit) [Quantum-Safe]
+   Hash: SHA256 (256-bit) [Quantum-Safe]
+   Quantum Strength Score: 15/100
+
+36. DHE-DSS-ARIA128-GCM-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: DSS [Quantum-Vulnerable]
+   Encryption: ARIAGCM(128) (128-bit) [Quantum-Vulnerable]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 15/100
+
+37. DHE-DSS-ARIA256-GCM-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: DSS [Quantum-Vulnerable]
+   Encryption: ARIAGCM(256) (256-bit) [Quantum-Safe]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 15/100
+
+38. DHE-DSS-CAMELLIA128-SHA
+   Protocol: SSLv3
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: DSS [Quantum-Vulnerable]
+   Encryption: Camellia(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 15/100
+
+39. DHE-DSS-CAMELLIA128-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: DSS [Quantum-Vulnerable]
+   Encryption: Camellia(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA256 (256-bit) [Quantum-Safe]
+   Quantum Strength Score: 15/100
+
+40. DHE-DSS-CAMELLIA256-SHA
+   Protocol: SSLv3
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: DSS [Quantum-Vulnerable]
+   Encryption: Camellia(256) (256-bit) [Quantum-Safe]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 15/100
+
+41. DHE-DSS-CAMELLIA256-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: DSS [Quantum-Vulnerable]
+   Encryption: Camellia(256) (256-bit) [Quantum-Safe]
+   Hash: SHA256 (256-bit) [Quantum-Safe]
+   Quantum Strength Score: 15/100
+
+42. DHE-PSK-AES128-CBC-SHA
+   Protocol: SSLv3
+   Key Exchange: DHEPSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: AES(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 15/100
+
+43. DHE-PSK-AES128-CBC-SHA256
+   Protocol: TLSv1
+   Key Exchange: DHEPSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: AES(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA256 (256-bit) [Quantum-Safe]
+   Quantum Strength Score: 15/100
+
+44. DHE-PSK-AES128-CCM
+   Protocol: TLSv1.2
+   Key Exchange: DHEPSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: AESCCM(128) (128-bit) [Quantum-Vulnerable]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 15/100
+
+45. DHE-PSK-AES128-CCM8
+   Protocol: TLSv1.2
+   Key Exchange: DHEPSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: AESCCM8(128) (128-bit) [Quantum-Vulnerable]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 15/100
+
+46. DHE-PSK-AES128-GCM-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DHEPSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: AESGCM(128) (128-bit) [Quantum-Vulnerable]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 15/100
+
+47. DHE-PSK-AES256-CBC-SHA
+   Protocol: SSLv3
+   Key Exchange: DHEPSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: AES(256) (256-bit) [Quantum-Safe]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 15/100
+
+48. DHE-PSK-AES256-CBC-SHA384
+   Protocol: TLSv1
+   Key Exchange: DHEPSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: AES(256) (256-bit) [Quantum-Safe]
+   Hash: SHA384 (384-bit) [Quantum-Safe]
+   Quantum Strength Score: 15/100
+
+49. DHE-PSK-AES256-CCM
+   Protocol: TLSv1.2
+   Key Exchange: DHEPSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: AESCCM(256) (256-bit) [Quantum-Safe]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 15/100
+
+50. DHE-PSK-AES256-CCM8
+   Protocol: TLSv1.2
+   Key Exchange: DHEPSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: AESCCM8(256) (256-bit) [Quantum-Safe]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 15/100
+
+51. DHE-PSK-AES256-GCM-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: DHEPSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: AESGCM(256) (256-bit) [Quantum-Safe]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 15/100
+
+52. DHE-PSK-ARIA128-GCM-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DHEPSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: ARIAGCM(128) (128-bit) [Quantum-Vulnerable]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 15/100
+
+53. DHE-PSK-ARIA256-GCM-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: DHEPSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: ARIAGCM(256) (256-bit) [Quantum-Safe]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 15/100
+
+54. DHE-PSK-CAMELLIA128-SHA256
+   Protocol: TLSv1
+   Key Exchange: DHEPSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: Camellia(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA256 (256-bit) [Quantum-Safe]
+   Quantum Strength Score: 15/100
+
+55. DHE-PSK-CAMELLIA256-SHA384
+   Protocol: TLSv1
+   Key Exchange: DHEPSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: Camellia(256) (256-bit) [Quantum-Safe]
+   Hash: SHA384 (384-bit) [Quantum-Safe]
+   Quantum Strength Score: 15/100
+
+56. DHE-PSK-CHACHA20-POLY1305
+   Protocol: TLSv1.2
+   Key Exchange: DHEPSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: CHACHA20/POLY1305(256) (256-bit) [Quantum-Safe]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 15/100
+
+57. DHE-PSK-NULL-SHA
+   Protocol: SSLv3
+   Key Exchange: DHEPSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: None [Quantum-Vulnerable]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 15/100
+
+58. DHE-PSK-NULL-SHA256
+   Protocol: TLSv1
+   Key Exchange: DHEPSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: None [Quantum-Vulnerable]
+   Hash: SHA256 (256-bit) [Quantum-Safe]
+   Quantum Strength Score: 15/100
+
+59. DHE-PSK-NULL-SHA384
+   Protocol: TLSv1
+   Key Exchange: DHEPSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: None [Quantum-Vulnerable]
+   Hash: SHA384 (384-bit) [Quantum-Safe]
+   Quantum Strength Score: 15/100
+
+60. DHE-RSA-AES128-CCM
+   Protocol: TLSv1.2
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: AESCCM(128) (128-bit) [Quantum-Vulnerable]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+61. DHE-RSA-AES128-CCM8
+   Protocol: TLSv1.2
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: AESCCM8(128) (128-bit) [Quantum-Vulnerable]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+62. DHE-RSA-AES128-GCM-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: AESGCM(128) (128-bit) [Quantum-Vulnerable]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+63. DHE-RSA-AES128-SHA
+   Protocol: SSLv3
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: AES(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+64. DHE-RSA-AES128-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: AES(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA256 (256-bit) [Quantum-Safe]
+   Quantum Strength Score: 10/100
+
+65. DHE-RSA-AES256-CCM
+   Protocol: TLSv1.2
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: AESCCM(256) (256-bit) [Quantum-Safe]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+66. DHE-RSA-AES256-CCM8
+   Protocol: TLSv1.2
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: AESCCM8(256) (256-bit) [Quantum-Safe]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+67. DHE-RSA-AES256-GCM-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: AESGCM(256) (256-bit) [Quantum-Safe]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+68. DHE-RSA-AES256-SHA
+   Protocol: SSLv3
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: AES(256) (256-bit) [Quantum-Safe]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+69. DHE-RSA-AES256-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: AES(256) (256-bit) [Quantum-Safe]
+   Hash: SHA256 (256-bit) [Quantum-Safe]
+   Quantum Strength Score: 10/100
+
+70. DHE-RSA-ARIA128-GCM-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: ARIAGCM(128) (128-bit) [Quantum-Vulnerable]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+71. DHE-RSA-ARIA256-GCM-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: ARIAGCM(256) (256-bit) [Quantum-Safe]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+72. DHE-RSA-CAMELLIA128-SHA
+   Protocol: SSLv3
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: Camellia(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+73. DHE-RSA-CAMELLIA128-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: Camellia(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA256 (256-bit) [Quantum-Safe]
+   Quantum Strength Score: 10/100
+
+74. DHE-RSA-CAMELLIA256-SHA
+   Protocol: SSLv3
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: Camellia(256) (256-bit) [Quantum-Safe]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+75. DHE-RSA-CAMELLIA256-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: Camellia(256) (256-bit) [Quantum-Safe]
+   Hash: SHA256 (256-bit) [Quantum-Safe]
+   Quantum Strength Score: 10/100
+
+76. DHE-RSA-CHACHA20-POLY1305
+   Protocol: TLSv1.2
+   Key Exchange: DH [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: CHACHA20/POLY1305(256) (256-bit) [Quantum-Safe]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+77. ECDHE-ARIA128-GCM-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: ECDH [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: ARIAGCM(128) (128-bit) [Quantum-Vulnerable]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+78. ECDHE-ARIA256-GCM-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: ECDH [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: ARIAGCM(256) (256-bit) [Quantum-Safe]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+79. ECDHE-ECDSA-AES128-CCM
+   Protocol: TLSv1.2
+   Key Exchange: ECDH [Quantum-Vulnerable]
+   Authentication: ECDSA [Quantum-Vulnerable]
+   Encryption: AESCCM(128) (128-bit) [Quantum-Vulnerable]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+80. ECDHE-ECDSA-AES128-CCM8
+   Protocol: TLSv1.2
+   Key Exchange: ECDH [Quantum-Vulnerable]
+   Authentication: ECDSA [Quantum-Vulnerable]
+   Encryption: AESCCM8(128) (128-bit) [Quantum-Vulnerable]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+81. ECDHE-ECDSA-AES128-GCM-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: ECDH [Quantum-Vulnerable]
+   Authentication: ECDSA [Quantum-Vulnerable]
+   Encryption: AESGCM(128) (128-bit) [Quantum-Vulnerable]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+82. ECDHE-ECDSA-AES128-SHA
+   Protocol: TLSv1
+   Key Exchange: ECDH [Quantum-Vulnerable]
+   Authentication: ECDSA [Quantum-Vulnerable]
+   Encryption: AES(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+83. ECDHE-ECDSA-AES128-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: ECDH [Quantum-Vulnerable]
+   Authentication: ECDSA [Quantum-Vulnerable]
+   Encryption: AES(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA256 (256-bit) [Quantum-Safe]
+   Quantum Strength Score: 10/100
+
+84. ECDHE-ECDSA-AES256-CCM
+   Protocol: TLSv1.2
+   Key Exchange: ECDH [Quantum-Vulnerable]
+   Authentication: ECDSA [Quantum-Vulnerable]
+   Encryption: AESCCM(256) (256-bit) [Quantum-Safe]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+85. ECDHE-ECDSA-AES256-CCM8
+   Protocol: TLSv1.2
+   Key Exchange: ECDH [Quantum-Vulnerable]
+   Authentication: ECDSA [Quantum-Vulnerable]
+   Encryption: AESCCM8(256) (256-bit) [Quantum-Safe]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+86. ECDHE-ECDSA-AES256-GCM-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: ECDH [Quantum-Vulnerable]
+   Authentication: ECDSA [Quantum-Vulnerable]
+   Encryption: AESGCM(256) (256-bit) [Quantum-Safe]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+87. ECDHE-ECDSA-AES256-SHA
+   Protocol: TLSv1
+   Key Exchange: ECDH [Quantum-Vulnerable]
+   Authentication: ECDSA [Quantum-Vulnerable]
+   Encryption: AES(256) (256-bit) [Quantum-Safe]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+88. ECDHE-ECDSA-AES256-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: ECDH [Quantum-Vulnerable]
+   Authentication: ECDSA [Quantum-Vulnerable]
+   Encryption: AES(256) (256-bit) [Quantum-Safe]
+   Hash: SHA384 (384-bit) [Quantum-Safe]
+   Quantum Strength Score: 10/100
+
+89. ECDHE-ECDSA-ARIA128-GCM-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: ECDH [Quantum-Vulnerable]
+   Authentication: ECDSA [Quantum-Vulnerable]
+   Encryption: ARIAGCM(128) (128-bit) [Quantum-Vulnerable]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+90. ECDHE-ECDSA-ARIA256-GCM-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: ECDH [Quantum-Vulnerable]
+   Authentication: ECDSA [Quantum-Vulnerable]
+   Encryption: ARIAGCM(256) (256-bit) [Quantum-Safe]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+91. ECDHE-ECDSA-CAMELLIA128-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: ECDH [Quantum-Vulnerable]
+   Authentication: ECDSA [Quantum-Vulnerable]
+   Encryption: Camellia(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA256 (256-bit) [Quantum-Safe]
+   Quantum Strength Score: 10/100
+
+92. ECDHE-ECDSA-CAMELLIA256-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: ECDH [Quantum-Vulnerable]
+   Authentication: ECDSA [Quantum-Vulnerable]
+   Encryption: Camellia(256) (256-bit) [Quantum-Safe]
+   Hash: SHA384 (384-bit) [Quantum-Safe]
+   Quantum Strength Score: 10/100
+
+93. ECDHE-ECDSA-CHACHA20-POLY1305
+   Protocol: TLSv1.2
+   Key Exchange: ECDH [Quantum-Vulnerable]
+   Authentication: ECDSA [Quantum-Vulnerable]
+   Encryption: CHACHA20/POLY1305(256) (256-bit) [Quantum-Safe]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+94. ECDHE-ECDSA-NULL-SHA
+   Protocol: TLSv1
+   Key Exchange: ECDH [Quantum-Vulnerable]
+   Authentication: ECDSA [Quantum-Vulnerable]
+   Encryption: None [Quantum-Vulnerable]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+95. ECDHE-PSK-AES128-CBC-SHA
+   Protocol: TLSv1
+   Key Exchange: ECDHEPSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: AES(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+96. ECDHE-PSK-AES128-CBC-SHA256
+   Protocol: TLSv1
+   Key Exchange: ECDHEPSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: AES(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA256 (256-bit) [Quantum-Safe]
+   Quantum Strength Score: 10/100
+
+97. ECDHE-PSK-AES256-CBC-SHA
+   Protocol: TLSv1
+   Key Exchange: ECDHEPSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: AES(256) (256-bit) [Quantum-Safe]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+98. ECDHE-PSK-AES256-CBC-SHA384
+   Protocol: TLSv1
+   Key Exchange: ECDHEPSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: AES(256) (256-bit) [Quantum-Safe]
+   Hash: SHA384 (384-bit) [Quantum-Safe]
+   Quantum Strength Score: 10/100
+
+99. ECDHE-PSK-CAMELLIA128-SHA256
+   Protocol: TLSv1
+   Key Exchange: ECDHEPSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: Camellia(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA256 (256-bit) [Quantum-Safe]
+   Quantum Strength Score: 10/100
+
+100. ECDHE-PSK-CAMELLIA256-SHA384
+   Protocol: TLSv1
+   Key Exchange: ECDHEPSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: Camellia(256) (256-bit) [Quantum-Safe]
+   Hash: SHA384 (384-bit) [Quantum-Safe]
+   Quantum Strength Score: 10/100
+
+101. ECDHE-PSK-CHACHA20-POLY1305
+   Protocol: TLSv1.2
+   Key Exchange: ECDHEPSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: CHACHA20/POLY1305(256) (256-bit) [Quantum-Safe]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+102. ECDHE-PSK-NULL-SHA
+   Protocol: TLSv1
+   Key Exchange: ECDHEPSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: None [Quantum-Vulnerable]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+103. ECDHE-PSK-NULL-SHA256
+   Protocol: TLSv1
+   Key Exchange: ECDHEPSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: None [Quantum-Vulnerable]
+   Hash: SHA256 (256-bit) [Quantum-Safe]
+   Quantum Strength Score: 10/100
+
+104. ECDHE-PSK-NULL-SHA384
+   Protocol: TLSv1
+   Key Exchange: ECDHEPSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: None [Quantum-Vulnerable]
+   Hash: SHA384 (384-bit) [Quantum-Safe]
+   Quantum Strength Score: 10/100
+
+105. ECDHE-RSA-AES128-GCM-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: ECDH [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: AESGCM(128) (128-bit) [Quantum-Vulnerable]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+106. ECDHE-RSA-AES128-SHA
+   Protocol: TLSv1
+   Key Exchange: ECDH [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: AES(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+107. ECDHE-RSA-AES128-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: ECDH [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: AES(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA256 (256-bit) [Quantum-Safe]
+   Quantum Strength Score: 10/100
+
+108. ECDHE-RSA-AES256-GCM-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: ECDH [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: AESGCM(256) (256-bit) [Quantum-Safe]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+109. ECDHE-RSA-AES256-SHA
+   Protocol: TLSv1
+   Key Exchange: ECDH [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: AES(256) (256-bit) [Quantum-Safe]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+110. ECDHE-RSA-AES256-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: ECDH [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: AES(256) (256-bit) [Quantum-Safe]
+   Hash: SHA384 (384-bit) [Quantum-Safe]
+   Quantum Strength Score: 10/100
+
+111. ECDHE-RSA-CAMELLIA128-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: ECDH [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: Camellia(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA256 (256-bit) [Quantum-Safe]
+   Quantum Strength Score: 10/100
+
+112. ECDHE-RSA-CAMELLIA256-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: ECDH [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: Camellia(256) (256-bit) [Quantum-Safe]
+   Hash: SHA384 (384-bit) [Quantum-Safe]
+   Quantum Strength Score: 10/100
+
+113. ECDHE-RSA-CHACHA20-POLY1305
+   Protocol: TLSv1.2
+   Key Exchange: ECDH [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: CHACHA20/POLY1305(256) (256-bit) [Quantum-Safe]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+114. ECDHE-RSA-NULL-SHA
+   Protocol: TLSv1
+   Key Exchange: ECDH [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: None [Quantum-Vulnerable]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+115. NULL-MD5
+   Protocol: SSLv3
+   Key Exchange: RSA [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: None [Quantum-Vulnerable]
+   Hash: MD5 (128-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+116. NULL-SHA
+   Protocol: SSLv3
+   Key Exchange: RSA [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: None [Quantum-Vulnerable]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+117. NULL-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: RSA [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: None [Quantum-Vulnerable]
+   Hash: SHA256 (256-bit) [Quantum-Safe]
+   Quantum Strength Score: 10/100
+
+118. RSA-PSK-AES128-CBC-SHA
+   Protocol: SSLv3
+   Key Exchange: RSAPSK [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: AES(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+119. RSA-PSK-AES128-CBC-SHA256
+   Protocol: TLSv1
+   Key Exchange: RSAPSK [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: AES(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA256 (256-bit) [Quantum-Safe]
+   Quantum Strength Score: 10/100
+
+120. RSA-PSK-AES128-GCM-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: RSAPSK [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: AESGCM(128) (128-bit) [Quantum-Vulnerable]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+121. RSA-PSK-AES256-CBC-SHA
+   Protocol: SSLv3
+   Key Exchange: RSAPSK [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: AES(256) (256-bit) [Quantum-Safe]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+122. RSA-PSK-AES256-CBC-SHA384
+   Protocol: TLSv1
+   Key Exchange: RSAPSK [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: AES(256) (256-bit) [Quantum-Safe]
+   Hash: SHA384 (384-bit) [Quantum-Safe]
+   Quantum Strength Score: 10/100
+
+123. RSA-PSK-AES256-GCM-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: RSAPSK [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: AESGCM(256) (256-bit) [Quantum-Safe]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+124. RSA-PSK-ARIA128-GCM-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: RSAPSK [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: ARIAGCM(128) (128-bit) [Quantum-Vulnerable]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+125. RSA-PSK-ARIA256-GCM-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: RSAPSK [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: ARIAGCM(256) (256-bit) [Quantum-Safe]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+126. RSA-PSK-CAMELLIA128-SHA256
+   Protocol: TLSv1
+   Key Exchange: RSAPSK [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: Camellia(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA256 (256-bit) [Quantum-Safe]
+   Quantum Strength Score: 10/100
+
+127. RSA-PSK-CAMELLIA256-SHA384
+   Protocol: TLSv1
+   Key Exchange: RSAPSK [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: Camellia(256) (256-bit) [Quantum-Safe]
+   Hash: SHA384 (384-bit) [Quantum-Safe]
+   Quantum Strength Score: 10/100
+
+128. RSA-PSK-CHACHA20-POLY1305
+   Protocol: TLSv1.2
+   Key Exchange: RSAPSK [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: CHACHA20/POLY1305(256) (256-bit) [Quantum-Safe]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+129. RSA-PSK-NULL-SHA
+   Protocol: SSLv3
+   Key Exchange: RSAPSK [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: None [Quantum-Vulnerable]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 10/100
+
+130. RSA-PSK-NULL-SHA256
+   Protocol: TLSv1
+   Key Exchange: RSAPSK [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: None [Quantum-Vulnerable]
+   Hash: SHA256 (256-bit) [Quantum-Safe]
+   Quantum Strength Score: 10/100
+
+131. RSA-PSK-NULL-SHA384
+   Protocol: TLSv1
+   Key Exchange: RSAPSK [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: None [Quantum-Vulnerable]
+   Hash: SHA384 (384-bit) [Quantum-Safe]
+   Quantum Strength Score: 10/100
+
+
+================================================================================
+CATEGORY: LOW
+Count: 18
+================================================================================
+
+These cipher suites have LIMITED quantum resistance.
+Typically AES-128 based (reduced to 64-bit security with Grover's algorithm).
+ACTION: Plan migration within 1-2 years.
+
+--------------------------------------------------------------------------------
+Cipher Suites in this category:
+--------------------------------------------------------------------------------
+
+1. PSK-AES128-CBC-SHA
+   Protocol: SSLv3
+   Key Exchange: PSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: AES(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 40/100
+
+2. PSK-AES128-CBC-SHA256
+   Protocol: TLSv1
+   Key Exchange: PSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: AES(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA256 (256-bit) [Quantum-Safe]
+   Quantum Strength Score: 40/100
+
+3. PSK-AES128-CCM
+   Protocol: TLSv1.2
+   Key Exchange: PSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: AESCCM(128) (128-bit) [Quantum-Vulnerable]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 40/100
+
+4. PSK-AES128-CCM8
+   Protocol: TLSv1.2
+   Key Exchange: PSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: AESCCM8(128) (128-bit) [Quantum-Vulnerable]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 40/100
+
+5. PSK-AES128-GCM-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: PSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: AESGCM(128) (128-bit) [Quantum-Vulnerable]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 40/100
+
+6. PSK-ARIA128-GCM-SHA256
+   Protocol: TLSv1.2
+   Key Exchange: PSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: ARIAGCM(128) (128-bit) [Quantum-Vulnerable]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 25/100
+
+7. PSK-ARIA256-GCM-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: PSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: ARIAGCM(256) (256-bit) [Quantum-Safe]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 25/100
+
+8. PSK-CAMELLIA128-SHA256
+   Protocol: TLSv1
+   Key Exchange: PSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: Camellia(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA256 (256-bit) [Quantum-Safe]
+   Quantum Strength Score: 25/100
+
+9. PSK-CAMELLIA256-SHA384
+   Protocol: TLSv1
+   Key Exchange: PSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: Camellia(256) (256-bit) [Quantum-Safe]
+   Hash: SHA384 (384-bit) [Quantum-Safe]
+   Quantum Strength Score: 25/100
+
+10. PSK-CHACHA20-POLY1305
+   Protocol: TLSv1.2
+   Key Exchange: PSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: CHACHA20/POLY1305(256) (256-bit) [Quantum-Safe]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 25/100
+
+11. PSK-NULL-SHA
+   Protocol: SSLv3
+   Key Exchange: PSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: None [Quantum-Vulnerable]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 25/100
+
+12. PSK-NULL-SHA256
+   Protocol: TLSv1
+   Key Exchange: PSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: None [Quantum-Vulnerable]
+   Hash: SHA256 (256-bit) [Quantum-Safe]
+   Quantum Strength Score: 25/100
+
+13. PSK-NULL-SHA384
+   Protocol: TLSv1
+   Key Exchange: PSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: None [Quantum-Vulnerable]
+   Hash: SHA384 (384-bit) [Quantum-Safe]
+   Quantum Strength Score: 25/100
+
+14. SRP-AES-128-CBC-SHA
+   Protocol: SSLv3
+   Key Exchange: SRP [Quantum-Vulnerable]
+   Authentication: SRP [Quantum-Vulnerable]
+   Encryption: AES(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 40/100
+
+15. SRP-DSS-AES-128-CBC-SHA
+   Protocol: SSLv3
+   Key Exchange: SRP [Quantum-Vulnerable]
+   Authentication: DSS [Quantum-Vulnerable]
+   Encryption: AES(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 40/100
+
+16. SRP-RSA-AES-128-CBC-SHA
+   Protocol: SSLv3
+   Key Exchange: SRP [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: AES(128) (128-bit) [Quantum-Vulnerable]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 40/100
+
+17. TLS_AES_128_GCM_SHA256
+   Protocol: TLSv1.3
+   Key Exchange: any [Quantum-Vulnerable]
+   Authentication: any [Quantum-Vulnerable]
+   Encryption: AESGCM(128) (128-bit) [Quantum-Vulnerable]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 40/100
+
+18. TLS_CHACHA20_POLY1305_SHA256
+   Protocol: TLSv1.3
+   Key Exchange: any [Quantum-Vulnerable]
+   Authentication: any [Quantum-Vulnerable]
+   Encryption: CHACHA20/POLY1305(256) (256-bit) [Quantum-Safe]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 25/100
+
+
+================================================================================
+CATEGORY: HIGH
+Count: 9
+================================================================================
+
+These cipher suites have GOOD quantum resistance.
+Typically AES-256 based (provides 128-bit quantum security).
+ACTION: Acceptable for current use, monitor developments.
+
+--------------------------------------------------------------------------------
+Cipher Suites in this category:
+--------------------------------------------------------------------------------
+
+1. PSK-AES256-CBC-SHA
+   Protocol: SSLv3
+   Key Exchange: PSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: AES(256) (256-bit) [Quantum-Safe]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 80/100
+
+2. PSK-AES256-CBC-SHA384
+   Protocol: TLSv1
+   Key Exchange: PSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: AES(256) (256-bit) [Quantum-Safe]
+   Hash: SHA384 (384-bit) [Quantum-Safe]
+   Quantum Strength Score: 80/100
+
+3. PSK-AES256-CCM
+   Protocol: TLSv1.2
+   Key Exchange: PSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: AESCCM(256) (256-bit) [Quantum-Safe]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 80/100
+
+4. PSK-AES256-CCM8
+   Protocol: TLSv1.2
+   Key Exchange: PSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: AESCCM8(256) (256-bit) [Quantum-Safe]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 80/100
+
+5. PSK-AES256-GCM-SHA384
+   Protocol: TLSv1.2
+   Key Exchange: PSK [Quantum-Vulnerable]
+   Authentication: PSK [Quantum-Vulnerable]
+   Encryption: AESGCM(256) (256-bit) [Quantum-Safe]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 80/100
+
+6. SRP-AES-256-CBC-SHA
+   Protocol: SSLv3
+   Key Exchange: SRP [Quantum-Vulnerable]
+   Authentication: SRP [Quantum-Vulnerable]
+   Encryption: AES(256) (256-bit) [Quantum-Safe]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 80/100
+
+7. SRP-DSS-AES-256-CBC-SHA
+   Protocol: SSLv3
+   Key Exchange: SRP [Quantum-Vulnerable]
+   Authentication: DSS [Quantum-Vulnerable]
+   Encryption: AES(256) (256-bit) [Quantum-Safe]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 80/100
+
+8. SRP-RSA-AES-256-CBC-SHA
+   Protocol: SSLv3
+   Key Exchange: SRP [Quantum-Vulnerable]
+   Authentication: RSA [Quantum-Vulnerable]
+   Encryption: AES(256) (256-bit) [Quantum-Safe]
+   Hash: SHA1 (160-bit) [Quantum-Vulnerable]
+   Quantum Strength Score: 80/100
+
+9. TLS_AES_256_GCM_SHA384
+   Protocol: TLSv1.3
+   Key Exchange: any [Quantum-Vulnerable]
+   Authentication: any [Quantum-Vulnerable]
+   Encryption: AESGCM(256) (256-bit) [Quantum-Safe]
+   Hash: AEAD [Quantum-Vulnerable]
+   Quantum Strength Score: 80/100
+
+
+================================================================================
+RECOMMENDATIONS
+================================================================================
+
+⚠️  URGENT: 131 CRITICAL cipher suites detected!
+
+IMMEDIATE ACTIONS REQUIRED:
+  1. Disable all cipher suites marked as CRITICAL
+  2. Configure TLS to prefer HIGH or QUANTUM_SAFE cipher suites
+  3. Plan migration to post-quantum cryptography
+
+POST-QUANTUM MIGRATION TIMELINE:
+  • Immediate (0-6 months): Audit and disable weak ciphers
+  • Short-term (6-12 months): Implement hybrid classical+PQC
+  • Medium-term (1-2 years): Migrate critical systems to PQC
+  • Long-term (2-5 years): Complete organizational PQC deployment
+
+RECOMMENDED POST-QUANTUM ALGORITHMS:
+  • CRYSTALS-Kyber: Key encapsulation mechanism
+  • CRYSTALS-Dilithium: Digital signatures
+  • FALCON: Compact signatures
+  • SPHINCS+: Hash-based signatures
+
+================================================================================
+END OF REPORT
+================================================================================
+
+Report generated by Quantum Vulnerability Scanner v1.0.0
+For detailed analysis, refer to the Excel report.
