@@ -103,9 +103,7 @@ class OpenSSLAnalyzer:
             return []
     
     def parse_cipher_line(self, cipher_line: str) -> Optional[CipherSuite]:
-        """Parse a cipher suite line from OpenSSL output"""
-        # Example format:
-        # ECDHE-RSA-AES256-GCM-SHA384 TLSv1.2 Kx=ECDH Au=RSA Enc=AESGCM(256) Mac=AEAD
+
         
         parts = cipher_line.split()
         if len(parts) < 5:
@@ -114,41 +112,41 @@ class OpenSSLAnalyzer:
         name = parts[0]
         protocol = parts[1] if len(parts) > 1 else "Unknown"
         
-        # Parse Key Exchange
+
         kx_match = re.search(r'Kx=(\S+)', cipher_line)
         kx_algorithm = kx_match.group(1) if kx_match else "Unknown"
         
-        # Parse Authentication
+
         au_match = re.search(r'Au=(\S+)', cipher_line)
         auth_algorithm = au_match.group(1) if au_match else "Unknown"
         
-        # Parse Encryption
+
         enc_match = re.search(r'Enc=(\S+)', cipher_line)
         enc_algorithm = enc_match.group(1) if enc_match else "Unknown"
         
-        # Parse MAC
+
         mac_match = re.search(r'Mac=(\S+)', cipher_line)
         mac_algorithm = mac_match.group(1) if mac_match else "Unknown"
         
-        # Extract key sizes
+
         enc_key_size = self._extract_key_size(enc_algorithm, name)
         
-        # Determine hash algorithm and its key size
+
         hash_algorithm = self._extract_hash_algorithm(name, mac_algorithm)
         hash_key_size = self._extract_hash_key_size(hash_algorithm)
         
-        # Classify quantum status for each component
+
         kx_quantum_status = self._classify_kx_quantum_status(kx_algorithm)
         auth_quantum_status = self._classify_auth_quantum_status(auth_algorithm)
         enc_quantum_status = self._classify_enc_quantum_status(enc_algorithm, enc_key_size)
         hash_quantum_status = self._classify_hash_quantum_status(hash_algorithm, hash_key_size)
         
-        # Legacy assessment for backward compatibility
+
         quantum_strength, strength_score = self._assess_quantum_strength(
             kx_algorithm, auth_algorithm, enc_algorithm, enc_key_size
         )
         
-        # Generate description and recommendation
+
         description = self._generate_description(
             kx_algorithm, auth_algorithm, enc_algorithm, enc_key_size
         )
@@ -176,13 +174,12 @@ class OpenSSLAnalyzer:
         )
     
     def _extract_key_size(self, enc_algorithm: str, cipher_name: str) -> Optional[int]:
-        """Extract key size from encryption algorithm or cipher name"""
-        # Try to extract from encryption algorithm (e.g., "AESGCM(256)")
+
         match = re.search(r'\((\d+)\)', enc_algorithm)
         if match:
             return int(match.group(1))
         
-        # Try to extract from cipher name (e.g., "AES256", "AES128")
+  
         match = re.search(r'AES(\d+)', cipher_name, re.IGNORECASE)
         if match:
             return int(match.group(1))
@@ -198,11 +195,11 @@ class OpenSSLAnalyzer:
         return None
     
     def _extract_hash_algorithm(self, cipher_name: str, mac_algorithm: str) -> Optional[str]:
-        """Extract hash algorithm from cipher name or MAC"""
+
         if 'AEAD' in mac_algorithm:
             return 'AEAD'
         
-        # Look for hash in cipher name
+
         if 'SHA384' in cipher_name:
             return 'SHA384'
         elif 'SHA256' in cipher_name:
@@ -215,7 +212,7 @@ class OpenSSLAnalyzer:
         return mac_algorithm
     
     def _extract_hash_key_size(self, hash_algorithm: Optional[str]) -> Optional[int]:
-        """Extract hash output size from hash algorithm name"""
+
         if not hash_algorithm:
             return None
         
@@ -237,77 +234,69 @@ class OpenSSLAnalyzer:
         elif 'MD5' in hash_upper:
             return 128
         
-        # AEAD doesn't have separate hash
+
         elif 'AEAD' in hash_upper:
             return None
         
         return None
     
     def _classify_kx_quantum_status(self, kx_algorithm: str) -> str:
-        """Classify key exchange as Quantum-Safe or Quantum-Vulnerable"""
+
         kx_upper = kx_algorithm.upper()
         
-        # Post-quantum algorithms
+
         pq_algorithms = ['KYBER', 'DILITHIUM', 'FALCON', 'SPHINCS', 'NTRU', 'MCELIECE', 'FRODOKEM']
         if any(alg in kx_upper for alg in pq_algorithms):
             return "Quantum-Safe"
         
-        # Classical asymmetric algorithms vulnerable to Shor's algorithm
+
         vulnerable_patterns = ['RSA', 'ECDH', 'ECDHE', 'DH', 'DHE', 'DSS']
         if any(pattern in kx_upper for pattern in vulnerable_patterns):
             return "Quantum-Vulnerable"
         
-        # Default: treat unknown as vulnerable
+
         return "Quantum-Vulnerable"
     
     def _classify_auth_quantum_status(self, auth_algorithm: str) -> str:
-        """Classify authentication as Quantum-Safe or Quantum-Vulnerable"""
+       
         auth_upper = auth_algorithm.upper()
         
-        # Post-quantum algorithms
+
         pq_algorithms = ['DILITHIUM', 'FALCON', 'SPHINCS', 'KYBER']
         if any(alg in auth_upper for alg in pq_algorithms):
             return "Quantum-Safe"
         
-        # Classical asymmetric algorithms vulnerable to Shor's algorithm
+
         vulnerable_patterns = ['RSA', 'ECDSA', 'DSA', 'DSS']
         if any(pattern in auth_upper for pattern in vulnerable_patterns):
             return "Quantum-Vulnerable"
         
-        # Default: treat unknown as vulnerable
+
         return "Quantum-Vulnerable"
     
     def _classify_enc_quantum_status(self, enc_algorithm: str, key_size: Optional[int]) -> str:
-        """Classify encryption as Quantum-Safe or Quantum-Vulnerable
         
-        Grover's algorithm: quantum security = n/2 (where n = key size)
-        Threshold: n/2 >= 128, therefore n >= 256 bits for quantum safety
-        """
         if not key_size:
-            return "Quantum-Vulnerable"  # Unknown key size, assume vulnerable
+            return "Quantum-Vulnerable"  
         
-        # Grover's algorithm: quantum security = n/2
+
         quantum_security = key_size / 2
         
-        # Threshold: n/2 >= 128 bits (n >= 256 bits)
+       
         if quantum_security >= 128:
             return "Quantum-Safe"
         else:
             return "Quantum-Vulnerable"
     
     def _classify_hash_quantum_status(self, hash_algorithm: Optional[str], hash_key_size: Optional[int]) -> str:
-        """Classify hash as Quantum-Safe or Quantum-Vulnerable
         
-        Grover's algorithm: quantum security = n/2 (where n = hash output size)
-        Threshold: n/2 >= 128, therefore n >= 256 bits for quantum safety
-        """
         if not hash_key_size:
-            return "Quantum-Vulnerable"  # Unknown hash size, assume vulnerable
+            return "Quantum-Vulnerable"  
         
-        # Grover's algorithm: quantum security = n/2
+        
         quantum_security = hash_key_size / 2
         
-        # Threshold: n/2 >= 128 bits (n >= 256 bits)
+        
         if quantum_security >= 128:
             return "Quantum-Safe"
         else:
@@ -320,20 +309,18 @@ class OpenSSLAnalyzer:
         enc_algorithm: str, 
         key_size: Optional[int]
     ) -> tuple[QuantumStrength, int]:
-        """Assess quantum resistance strength and return score (0-100) - Legacy method"""
         
-        # Check for post-quantum algorithms
         pq_algorithms = ['KYBER', 'DILITHIUM', 'FALCON', 'SPHINCS', 'NTRU']
         if any(alg in kx_algorithm.upper() for alg in pq_algorithms):
             return QuantumStrength.QUANTUM_SAFE, 100
         
-        # Critical vulnerabilities (broken by quantum computers)
+        
         critical_patterns = [
             'RSA', 'ECDH', 'ECDSA', 'DH', 'DHE', 'DSS', 'ECDHE'
         ]
         
         if any(pattern in kx_algorithm.upper() for pattern in critical_patterns):
-            # RSA/ECC are vulnerable to Shor's algorithm
+         
             if 'RSA' in kx_algorithm.upper() or 'RSA' in auth_algorithm.upper():
                 return QuantumStrength.CRITICAL, 10
             if 'ECDH' in kx_algorithm.upper() or 'ECDSA' in auth_algorithm.upper():
@@ -341,20 +328,20 @@ class OpenSSLAnalyzer:
             if 'DHE' in kx_algorithm.upper() or 'DH' in kx_algorithm.upper():
                 return QuantumStrength.CRITICAL, 15
         
-        # Symmetric encryption assessment (Grover's algorithm)
+        
         if key_size:
             if 'AES' in enc_algorithm.upper():
                 if key_size >= 256:
-                    return QuantumStrength.HIGH, 80  # AES-256 provides ~128-bit quantum security
+                    return QuantumStrength.HIGH, 80  
                 elif key_size >= 192:
                     return QuantumStrength.MEDIUM, 60
                 elif key_size >= 128:
-                    return QuantumStrength.LOW, 40  # AES-128 provides ~64-bit quantum security
+                    return QuantumStrength.LOW, 40  
             
             if '3DES' in enc_algorithm.upper():
-                return QuantumStrength.CRITICAL, 20  # 3DES is already weak
+                return QuantumStrength.CRITICAL, 20  
         
-        # Default for unknown/weak algorithms
+      
         return QuantumStrength.LOW, 25
     
     def _generate_description(
@@ -364,7 +351,7 @@ class OpenSSLAnalyzer:
         enc_algorithm: str,
         key_size: Optional[int]
     ) -> str:
-        """Generate human-readable description"""
+       
         parts = []
         
         if kx_algorithm != "Unknown":
@@ -380,7 +367,7 @@ class OpenSSLAnalyzer:
         return ", ".join(parts) if parts else "Cipher suite details"
     
     def _generate_recommendation(self, quantum_strength: QuantumStrength) -> str:
-        """Generate recommendation based on quantum strength"""
+        
         recommendations = {
             QuantumStrength.CRITICAL: "URGENT: Replace immediately. Vulnerable to quantum attacks using Shor's algorithm. Migrate to post-quantum cryptography.",
             QuantumStrength.LOW: "HIGH PRIORITY: Replace soon. Limited quantum resistance. Plan migration to post-quantum algorithms within 1-2 years.",
@@ -391,7 +378,7 @@ class OpenSSLAnalyzer:
         return recommendations.get(quantum_strength, "Evaluate and consider alternatives.")
     
     def analyze(self) -> Dict[str, any]:
-        """Run complete OpenSSL analysis"""
+        
         if not self.check_openssl_available():
             return {
                 'error': 'OpenSSL not found on system',
@@ -407,7 +394,7 @@ class OpenSSLAnalyzer:
             if cipher:
                 self.cipher_suites.append(cipher)
         
-        # Generate statistics
+        
         stats = self._generate_statistics()
         
         return {
@@ -418,7 +405,7 @@ class OpenSSLAnalyzer:
         }
     
     def _generate_statistics(self) -> Dict[str, any]:
-        """Generate statistical summary"""
+        
         if not self.cipher_suites:
             return {}
         

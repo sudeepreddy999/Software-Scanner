@@ -21,7 +21,7 @@ from .vulnerability_db import VulnerabilityDatabase, Severity
 
 
 class WindowsSystemScanner:
-    """Scanner for Windows static system files."""
+
 
     DEFAULT_DIRS = [
         r"C:\\ProgramData",
@@ -54,14 +54,12 @@ class WindowsSystemScanner:
 
         for fp in files:
             try:
-                # Decide how to parse based on extension/name
                 finding = self._analyze_file(fp)
                 if finding:
                     result.add_finding(finding)
             except Exception as e:  # be resilient
                 result.add_error(fp, str(e))
 
-        # Keep same sorting as main scanner
         severity_order = {
             Severity.CRITICAL: 0,
             Severity.HIGH: 1,
@@ -78,7 +76,6 @@ class WindowsSystemScanner:
             if not os.path.exists(root):
                 continue
             for dirpath, dirnames, filenames in os.walk(root):
-                # Skip obvious huge dirs to keep runtime reasonable
                 base = os.path.basename(dirpath).lower()
                 if base in {"winsxs", "system volume information", "$recycle.bin", "appdata"}:
                     continue
@@ -92,7 +89,7 @@ class WindowsSystemScanner:
         ext = os.path.splitext(path)[1].lower()
         name = os.path.basename(path).lower()
 
-        # SSH private keys by filename
+
         if name in {"id_rsa", "id_dsa", "id_ecdsa"}:
             alg = {
                 "id_rsa": "RSA",
@@ -114,7 +111,7 @@ class WindowsSystemScanner:
                 return self._make_finding(path, alg, key_size, matched="key container")
 
         if ext in {".cfg", ".conf", ".ini"} or name.endswith(".config"):
-            # Scan config text for algorithms and key sizes
+
             try:
                 with open(path, "r", encoding="utf-8", errors="ignore") as f:
                     text = f.read()
@@ -148,9 +145,9 @@ class WindowsSystemScanner:
             if isinstance(pub, dsa.DSAPublicKey):
                 return "DSA", pub.key_size
             if isinstance(pub, ec.EllipticCurvePublicKey):
-                # ECDSA key size corresponds to curve size
+
                 try:
-                    size = pub.curve.key_size  # type: ignore[attr-defined]
+                    size = pub.curve.key_size  
                 except Exception:
                     size = None
                 return "ECDSA", size
@@ -165,7 +162,7 @@ class WindowsSystemScanner:
                 data = f.read()
         except Exception:
             return None, None
-        # PKCS#12
+
         if ext in {".p12", ".pfx"}:
             try:
                 key, cert, _ = load_key_and_certificates(data, password=None)
@@ -203,27 +200,42 @@ class WindowsSystemScanner:
         return None, None
 
     def _try_load_pem_private_key_for_size(self, path: str) -> Optional[int]:
-        try:
-            with open(path, "rb") as f:
-                data = f.read()
-            key = serialization.load_pem_private_key(data, password=None)
-            if hasattr(key, "key_size"):
-                return int(getattr(key, "key_size"))
-        except Exception:
+            try:
+                with open(path, "rb") as f:
+                    data = f.read()
+            
+                key = None
+
+                if b"BEGIN OPENSSH PRIVATE KEY" in data:
+                    try:
+                        key = serialization.load_ssh_private_key(data, password=None)
+                    except Exception:
+                        pass
+                
+
+                if key is None:
+                    try:
+                        key = serialization.load_pem_private_key(data, password=None)
+                    except Exception:
+                        pass
+                
+                if key is not None:
+                    return getattr(key, "key_size", None)
+            except Exception:
+                pass
             return None
-        return None
 
     def _scan_text_for_alg_and_size(self, text: str) -> Tuple[Optional[str], Optional[int]]:
         import re
-        # Look for algorithm names
+
         algs = ["RSA", "ECDSA", "DSA", "Diffie-Hellman", "DH", "EC"]
         found_alg = None
         for a in algs:
             if re.search(rf"\b{re.escape(a)}\b", text, flags=re.IGNORECASE):
-                # Normalize
+
                 found_alg = "ECDSA" if a in ("EC", "ECDSA") else ("Diffie-Hellman" if a == "DH" else a)
                 break
-        # Extract size
+
         key_size = None
         size_matchers = [
             r"\b(\d{3,5})\s*-?\s*bits?\b",
@@ -242,7 +254,7 @@ class WindowsSystemScanner:
         return found_alg, key_size
 
     def _make_finding(self, path: str, algorithm: str, key_size: Optional[int], matched: str) -> Finding:
-        # Map algorithm to DB signature and adjust severity based on key size
+  
         sig = self.vuln_db.get_signature_by_algorithm(algorithm)
         severity = self.vuln_db.get_severity_for_algorithm_and_size(algorithm, key_size)
         description = (sig.description if sig else f"{algorithm} usage detected on system.")

@@ -20,29 +20,11 @@ class BaseDetector(ABC):
     
     @abstractmethod
     def detect(self, file_path: str, content: str) -> List[Finding]:
-        """
-        Detect vulnerabilities in file content
-        
-        Args:
-            file_path: Path to the file being scanned
-            content: File content as string
-            
-        Returns:
-            List of Finding objects
-        """
+       
         pass
     
     def _regex_search(self, file_path: str, content: str) -> List[Finding]:
-        """
-        Perform regex-based pattern matching on content
         
-        Args:
-            file_path: Path to the file being scanned
-            content: File content as string
-            
-        Returns:
-            List of Finding objects
-        """
         findings = []
         lines = content.split('\n')
         

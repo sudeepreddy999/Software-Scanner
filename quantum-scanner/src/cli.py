@@ -1,6 +1,4 @@
-"""
-Command-Line Interface for Quantum Vulnerability Scanner
-"""
+
 
 import sys
 import os
@@ -19,7 +17,7 @@ from .windows_system_scanner import WindowsSystemScanner
 
 
 def main():
-    """Main entry point for CLI with subcommands"""
+ 
     parser = argparse.ArgumentParser(
         description="Quantum Vulnerability Scanner",
         formatter_class=argparse.RawDescriptionHelpFormatter
@@ -27,7 +25,7 @@ def main():
     
     subparsers = parser.add_subparsers(dest='command', help='Available commands')
     
-    # Subcommand: scan (original functionality)
+  
     scan_parser = subparsers.add_parser(
         'scan',
         help='Scan source code for quantum-vulnerable algorithms',
